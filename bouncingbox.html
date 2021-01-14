@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+
+            background-color: rgb(255, 166, 0);
+            position: absolute;
+            color: rgb(88, 189, 219);
+            font-size: 26.5px;
+            border-style:dotted;
+            border-color:rgb(214, 2, 214)
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="Box">This Is Fine
+
+    </div>
+</body>
+
+</html>
+<script>
+    var Box = document.getElementById("Box")
+    setInterval(update, 1)
+    var x = 0
+    var y = 0
+    var Horspeed = 2
+    var Verspeed = 1
+    var width = 100
+    var height = 100
+    function update() {
+        Box.style.left = x + "px"
+        Box.style.width = width + "px"
+        Box.style.height = height + "px"
+        x = x + Horspeed
+        if (x >= window.innerWidth - width) {
+            Horspeed = -Horspeed
+        }
+        if (x <= 0) {
+            Horspeed = -Horspeed
+        }
+        Box.style.top = y + "px"
+        y = y + Verspeed
+        if (y >= window.innerHeight - height) {
+            Verspeed = -Verspeed
+        }
+        if (y <= 0) {
+            Verspeed = -Verspeed
+        }
+
+    }
+
+</script>
