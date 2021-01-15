@@ -3,36 +3,36 @@
 
 <head>
     <style>
-        div {
-
-            background-color: rgb(255, 166, 0);
+        img {
+    
             position: absolute;
-            color: rgb(88, 189, 219);
-            font-size: 26.5px;
-            border-style:dotted;
-            border-color:rgb(214, 2, 214)
-
-
         }
+        
+        body {
+            background-color: rgb(66, 116, 255);
+        }
+
     </style>
 
 </head>
 
 <body>
-    <div id="Box">This Is Fine
-
-    </div>
+    
+        <img id="Box" src="https://e7.pngegg.com/pngimages/237/823/png-clipart-dvd-logo-blu-ray-disc-copy-protection-dvd-text-logo.png"
+        
 </body>
 
 </html>
 <script>
     var Box = document.getElementById("Box")
+    Box.addEventListener("click",BoxClick)
     setInterval(update, 1)
+    
     var x = 0
     var y = 0
     var Horspeed = 2
     var Verspeed = 1
-    var width = 100
+    var width = 150
     var height = 100
     function update() {
         Box.style.left = x + "px"
@@ -55,5 +55,21 @@
         }
 
     }
+
+function BoxClick(){
+    if(Horspeed>=0){
+        Horspeed=Horspeed+5
+    }
+    if(Verspeed>=0){
+        Verspeed=Verspeed+5
+    }
+    if(Horspeed<=0){
+        Horspeed=Horspeed-5
+    }
+    if(Verspeed<=0){
+        Verspeed=Verspeed-5
+    }
+}
+
 
 </script>
